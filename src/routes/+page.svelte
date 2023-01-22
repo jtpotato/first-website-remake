@@ -6,7 +6,7 @@
 <div class="bg-stone-800 text-white">
 	<!--Header-->
 	<div class="flex flex-row items-center bg-stone-900 p-4">
-		<img src="/img/first-bw.svg" class="h-10 cursor-pointer" />
+		<img src="/img/first-bw.svg" class="h-10 cursor-pointer" alt="The logo of FIRST" />
 	</div>
 	<div class="p-10 flex flex-col justify-center">
 		<p class="text-6xl font-bold text-center">
@@ -52,10 +52,24 @@
 	</div>
 	<div class="bg-black">
 		<FirstEnergiseAnim />
-		<div class="p-10">
-			<p class="text-6xl font-bold text-center">Innovation <GradientText>cannot</GradientText> wait.</p>
+		<div class="p-10 flex flex-col items-center">
+			<p class="text-6xl font-bold text-center">
+				Innovation <GradientText>cannot</GradientText> wait.
+			</p>
+			<br />
+			<p class="w-2/3">
+				From the machines that move us to the food that sustains us to the wireless technologies
+				that connect us, energy plays an essential role in keeping our world running. During our
+				2022-2023 robotics season, FIRST® ENERGIZE℠ presented by Qualcomm, our teams will reimagine
+				the future of sustainable energy and power their ideas forward.
+			</p>
 			<br/>
-			<p>From the machines that move us to the food that sustains us to the wireless technologies that connect us, energy plays an essential role in keeping our world running. During our 2022-2023 robotics season, FIRST® ENERGIZE℠ presented by Qualcomm, our teams will reimagine the future of sustainable energy and power their ideas forward.</p>
+			<a class="px-10 py-5 bg-white text-black rounded-full cursor-pointer" href="https://www.youtube.com/watch?v=m-qwsMmkFwg" target="_blank" rel="noreferrer">
+				<p class="font-bold flex flex-row items-center">
+					Watch the video
+					<span class="material-icons ml-1">play_circle_outline</span>
+				</p>
+			</a>
 		</div>
 	</div>
 	<div class="bg-stone-800" style="height: 500vh;" />
