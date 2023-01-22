@@ -49,11 +49,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="p-10 bg-black">
-		<div class="flex flex-col items-center">
-			<p class="text-6xl font-bold">
-				The <GradientText>power</GradientText> is <GradientText>yours</GradientText>.
-			</p>
-		</div>
+	<div class="bg-black h-screen">
+
 	</div>
 </div>
