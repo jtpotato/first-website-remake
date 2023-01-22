@@ -1,5 +1,6 @@
 <script>
 	import GradientText from '$lib/components/GradientText.svelte';
+	import FirstEnergiseAnim from './FirstEnergiseAnim.svelte';
 </script>
 
 <div class="bg-stone-800 text-white">
@@ -49,7 +50,13 @@
 			</div>
 		</div>
 	</div>
-	<div class="bg-black h-screen">
-
+	<div class="bg-black">
+		<FirstEnergiseAnim />
+		<div class="p-10">
+			<p class="text-6xl font-bold text-center">Innovation <GradientText>cannot</GradientText> wait.</p>
+			<br/>
+			<p>From the machines that move us to the food that sustains us to the wireless technologies that connect us, energy plays an essential role in keeping our world running. During our 2022-2023 robotics season, FIRST® ENERGIZE℠ presented by Qualcomm, our teams will reimagine the future of sustainable energy and power their ideas forward.</p>
+		</div>
 	</div>
+	<div class="bg-stone-800" style="height: 500vh;" />
 </div>
