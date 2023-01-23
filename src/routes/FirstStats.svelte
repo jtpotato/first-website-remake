@@ -21,8 +21,6 @@
 			} else {
 				scrollFraction = internalScrollFraction;
 			}
-
-			console.log(scrollFraction);
 		});
 	});
 </script>
