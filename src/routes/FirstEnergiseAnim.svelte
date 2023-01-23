@@ -66,7 +66,7 @@
 			});
 		} else {
 			console.log("is mobile")
-			canvas.width = window.innerWidth;
+			canvas.width = window.innerWidth * 2;
 			canvas.height = canvas.width / (16 / 9);
 		}
 	});
