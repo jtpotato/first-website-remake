@@ -8,22 +8,22 @@
 
 <div class="bg-stone-800 text-white">
 	<!--Header-->
-	<div class="flex flex-row items-center bg-stone-900 p-4">
+	<div class="flex flex-row items-center justify-center md:justify-start bg-stone-900 p-4">
 		<img src="/img/first-bw.svg" class="h-10 cursor-pointer" alt="The logo of FIRST" />
 	</div>
-	<div class="p-10 flex flex-col justify-center h-80">
-		<p class="text-6xl font-bold text-center">
+	<div class="p-10 flex flex-col justify-center md:h-80">
+		<p class="text-4xl md:text-6xl font-bold text-center">
 			A global robotics community preparing young people for the <GradientText>future</GradientText
 			>.
 		</p>
 	</div>
-	<div class="p-10 flex flex-row space-x-16">
+	<div class="p-10 flex flex-col-reverse md:flex-row md:space-x-16">
 		<div class="flex items-center">
 			<div>
-				<p class="text-4xl font-bold">
+				<p class="text-2xl md:text-4xl font-bold">
 					The <GradientText>world's leading</GradientText> STEM education nonprofit.
 				</p>
-				<br />
+				<br class="hidden md:block" />
 				<p>
 					FIRST® inspires young people to be science and technology leaders and innovators by
 					engaging them in exciting mentor-based programs that build science, engineering, and
@@ -32,18 +32,19 @@
 				</p>
 			</div>
 		</div>
+		<div class="block md:hidden h-4"></div>
 		<!--Image with attribs-->
 		<img
 			src="/img/frc-1.jpg"
 			alt="A FIRST Robotics Competition Robot"
-			class="object-cover object-right-bottom h-80 rounded-xl"
+			class="object-cover object-right-bottom w-full md:w-1/2 rounded-xl"
 		/>
 	</div>
 	<div class="bg-black">
 		<FirstEnergiseAnim />
 		<div class="bg-[url('/img/dots-bg-lightgreen.png')] bg-right">
-			<div class="py-20 flex flex-col items-center bg-black bg-opacity-90">
-				<p class="text-6xl font-bold text-center">
+			<div class="px-10 py-20 flex flex-col items-center bg-black bg-opacity-90">
+				<p class="text-4xl md:text-6xl font-bold text-center">
 					Innovation <GradientText>cannot</GradientText> wait.
 				</p>
 				<br />

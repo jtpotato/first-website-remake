@@ -27,15 +27,15 @@
 
 <div bind:this={firstStatsContainer}>
 	<div style="height: 200vh">
-		<div class="h-screen flex flex-col justify-center items-center sticky top-0">
+		<div class="h-screen flex flex-col justify-center items-center sticky top-0 p-10">
 			<div>
-				<p class="text-6xl font-bold">
+				<p class="text-4xl md:text-6xl font-bold">
 					<GradientText>{Math.floor(2500000 * scrollFraction)}</GradientText> students.
 				</p>
-				<p class="text-6xl font-bold">
+				<p class="text-4xl md:text-6xl font-bold">
 					<GradientText>{Math.floor(110 * scrollFraction)}</GradientText> countries.
 				</p>
-				<p class="text-6xl font-bold">
+				<p class="text-4xl md:text-6xl font-bold">
 					<GradientText>{Math.floor(2900 * scrollFraction)}</GradientText> events between 2021 and 2022.
 				</p>
 			</div>

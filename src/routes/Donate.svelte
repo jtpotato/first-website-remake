@@ -1,5 +1,5 @@
 <div class="p-10 flex flex-col items-center justify-center space-y-8">
-	<p class="text-6xl font-bold">We could use your help.</p>
+	<p class="text-4xl md:text-6xl font-bold">We could use your help.</p>
 	<div class="flex flex-row space-x-8">
 		<div
 			class="h-16 w-40 flex justify-center items-center bg-white text-black rounded-full cursor-pointer"
