@@ -51,6 +51,10 @@
 			const maxScrollTop = firstEnergiseAnimContainer.scrollHeight - window.innerHeight;
 			const scrollFraction = scrollTop / maxScrollTop;
 
+			if (scrollFraction < 0 || scrollFraction > 1) {
+				return;
+			}
+
 			const frameIndex = Math.min(frameCount - 1, Math.floor(scrollFraction * frameCount));
 			if (frameIndex >= 0) {
 				requestAnimationFrame(() => updateImage(frameIndex));
@@ -59,8 +63,6 @@
 	});
 </script>
 
-<div style="height: 500vh" id="firstEnergiseAnimContainer" class="flex justify-center">
-	<div>
-		<canvas id="scrollAnimation" class="sticky top-0" style="transform: scale(0.5)"/>
-	</div>
+<div style="height: 500vh" id="firstEnergiseAnimContainer" class="flex flex-col">
+	<canvas id="scrollAnimation" class="sticky top-0" style="transform: scale(0.5)" />
 </div>
