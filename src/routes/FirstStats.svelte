@@ -27,7 +27,7 @@
 
 <div bind:this={firstStatsContainer}>
 	<div style="height: 200vh">
-		<div class="h-screen flex flex-col justify-center items-center sticky top-0 p-10">
+		<div class="h-screen flex flex-col justify-center items-center sticky top-0 pl-10 md:p-10">
 			<div>
 				<p class="text-4xl md:text-6xl font-bold">
 					<GradientText>{Math.floor(2500000 * scrollFraction).toString().padStart(7, '0')}</GradientText> students.
