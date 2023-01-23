@@ -34,7 +34,7 @@
 		</div>
 		<!--Image with attribs-->
 		<img
-			src="/img/frc-1.png"
+			src="/img/frc-1.jpg"
 			alt="A FIRST Robotics Competition Robot"
 			class="object-cover object-right-bottom h-80 rounded-xl"
 		/>
