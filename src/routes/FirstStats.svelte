@@ -30,13 +30,13 @@
 		<div class="h-screen flex flex-col justify-center items-center sticky top-0 p-10">
 			<div>
 				<p class="text-4xl md:text-6xl font-bold">
-					<GradientText>{Math.floor(2500000 * scrollFraction)}</GradientText> students.
+					<GradientText>{Math.floor(2500000 * scrollFraction).toString().padStart(7, '0')}</GradientText> students.
 				</p>
 				<p class="text-4xl md:text-6xl font-bold">
-					<GradientText>{Math.floor(110 * scrollFraction)}</GradientText> countries.
+					<GradientText>{Math.floor(110 * scrollFraction).toString().padStart(3, '0')}</GradientText> countries.
 				</p>
 				<p class="text-4xl md:text-6xl font-bold">
-					<GradientText>{Math.floor(2900 * scrollFraction)}</GradientText> events between 2021 and 2022.
+					<GradientText>{Math.floor(2900 * scrollFraction).toString().padStart(4, '0')}</GradientText> events between 2021 and 2022.
 				</p>
 			</div>
 		</div>
