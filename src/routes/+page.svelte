@@ -1,6 +1,9 @@
 <script>
 	import GradientText from '$lib/components/GradientText.svelte';
+	import Donate from './Donate.svelte';
 	import FirstEnergiseAnim from './FirstEnergiseAnim.svelte';
+	import FirstStats from './FirstStats.svelte';
+	import Footer from './Footer.svelte';
 </script>
 
 <div class="bg-stone-800 text-white">
@@ -65,5 +68,13 @@
 			</div>
 		</div>
 	</div>
-	<div class="bg-stone-800" style="height: 500vh;" />
+	<div class="bg-stone-800">
+		<FirstStats />
+	</div>
+	<div class="bg-black">
+		<Donate />
+	</div>
+	<div class="bg-stone-800">
+		<Footer />
+	</div>
 </div>
