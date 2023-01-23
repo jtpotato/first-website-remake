@@ -29,18 +29,26 @@
 			context.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
 		};
 
+		/**
+		 * @type {any[]}
+		 */
+		let frames = [];
+
 		const updateImage = (/** @type {number} */ index) => {
-			img.src = currentFrame(index);
+			let img = frames[index];
 			context.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
 		};
 
 		const firstEnergiseAnimContainer = document.getElementById('firstEnergiseAnimContainer');
 		const frameCount = 130;
 
+		
+
 		const preloadImages = () => {
 			for (let i = 1; i < frameCount; i++) {
 				const img = new Image();
 				img.src = currentFrame(i);
+				frames.push(img);
 			}
 		};
 
