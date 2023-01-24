@@ -2,6 +2,7 @@
 	import GradientText from '$lib/components/GradientText.svelte';
 	import Donate from './Donate.svelte';
 	import FirstEnergiseAnim from './FirstEnergiseAnim.svelte';
+	import FirstPrograms from './FirstPrograms.svelte';
 	import FirstStats from './FirstStats.svelte';
 	import Footer from './Footer.svelte';
 </script>
@@ -11,12 +12,12 @@
 	<div class="flex flex-row items-center justify-center md:justify-start bg-stone-900 p-4">
 		<img src="/img/first-bw.svg" class="h-10 cursor-pointer" alt="The logo of FIRST" />
 	</div>
-	<div class="p-10 flex flex-col justify-center md:h-80">
-		<p class="text-4xl md:text-6xl font-bold text-center">
-			A global robotics community preparing young people for the <GradientText>future</GradientText
-			>.
-		</p>
-	</div>
+		<div class="flex flex-col justify-center md:h-80 p-10">
+			<p class="text-4xl md:text-6xl font-bold text-center">
+				A global robotics community preparing young people for the <GradientText>future</GradientText
+				>.
+			</p>
+		</div>
 	<div class="p-10 flex flex-col-reverse md:flex-row md:space-x-16">
 		<div class="flex items-center">
 			<div>
@@ -71,6 +72,9 @@
 	</div>
 	<div class="bg-stone-800">
 		<FirstStats />
+	</div>
+	<div class="bg-stone-800">
+		<FirstPrograms />
 	</div>
 	<div class="bg-black">
 		<Donate />

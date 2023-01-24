@@ -30,11 +30,12 @@
 		<div class="h-screen flex flex-col justify-center items-center sticky top-0 pl-10 md:p-10">
 			<div>
 				<p class="text-4xl md:text-6xl font-bold">
-					<GradientText
-						>{Math.floor(2500000 * scrollFraction)
-							.toString()
-							.padStart(7, '0')}</GradientText
-					> students.
+						<GradientText
+							>{Math.floor(2500000 * scrollFraction)
+								.toString()
+								.padStart(7, '0')}</GradientText
+						>
+					students.
 				</p>
 				<p class="text-4xl md:text-6xl font-bold">
 					<GradientText
