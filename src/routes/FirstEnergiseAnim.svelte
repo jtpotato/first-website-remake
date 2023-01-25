@@ -1,7 +1,9 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 
 	let isMobile = false;
+	let firstEnergiseAnimContainer: HTMLDivElement;
+	let canvas: HTMLCanvasElement;
 
 	onMount(() => {
 		if (navigator.userAgent.indexOf("Mobi") > -1) {
@@ -9,55 +11,52 @@
 		}
 
 		const html = document.documentElement;
-		const canvas = document.getElementById('scrollAnimation');
 		const context = canvas.getContext('2d');
-		context.imageSmoothingEnabled = true;
 
-		const currentFrame = (index) =>
+		const currentFrame = (index: number) =>
 			`/img/img_sequences/first-energize/frame-${index.toString().padStart(6, '0')}.jpg`;
-
-		const img = new Image();
-		img.src = currentFrame(1);
 
 		if (!isMobile) {
 			canvas.height = window.innerHeight;
 			canvas.width = canvas.height / (9 / 16);
 
-			/**
-			 * @type {any[]}
-			 */
-			let frames = [];
+			let frames: any[] = [];
 
-			const updateImage = (/** @type {number} */ index) => {
+			const updateImage = (index: number) => {
 				let img = frames[index];
 				try {
-					context.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
-				} catch {
+					context?.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
+				} catch (error) {
 					// literally do nothing.
+					console.error(index, frames.length, error)
 				}
 				
 			};
 
-			const firstEnergiseAnimContainer = document.getElementById('firstEnergiseAnimContainer');
 			const frameCount = 130;
 
 			const preloadImages = () => {
-				for (let i = 1; i < frameCount; i++) {
+				for (let i = 1; i < frameCount + 1; i++) {
 					const img = new Image();
 					img.src = currentFrame(i);
 					frames.push(img);
 				}
+
+				updateImage(1);
 			};
 
 			preloadImages();
 
 			window.addEventListener('scroll', () => {
-				const scrollTop = html.scrollTop;
+				const scrollTop = firstEnergiseAnimContainer.getBoundingClientRect().top * -1;
 				const maxScrollTop = firstEnergiseAnimContainer.scrollHeight - window.innerHeight;
-				const scrollFraction = scrollTop / maxScrollTop;
+				let scrollFraction = scrollTop / maxScrollTop;
 
-				if (scrollFraction < 0 || scrollFraction > 1) {
-					return;
+				if (scrollFraction < 0) {
+					scrollFraction = 0;
+				}
+				if (scrollFraction > 1) {
+					scrollFraction = 1;
 				}
 
 				const frameIndex = Math.min(frameCount - 1, Math.floor(scrollFraction * frameCount));
@@ -73,6 +72,6 @@
 	});
 </script>
 
-<div style="{isMobile ? "" : "height: 500vh"}" id="firstEnergiseAnimContainer" class="flex flex-col">
-	<canvas id="scrollAnimation" class="sticky top-0" style="{isMobile ? "" : "transform: scale(0.5)"}" />
+<div style="{isMobile ? "" : "height: 300vh"}" bind:this={firstEnergiseAnimContainer} class="flex flex-col">
+	<canvas bind:this={canvas} class="sticky top-0" style="{isMobile ? "" : "transform: scale(0.5)"}" />
 </div>

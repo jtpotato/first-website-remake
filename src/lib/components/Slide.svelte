@@ -8,7 +8,7 @@
 
 	onMount(() => {
 		function slideIn(event: any) {
-			let scrollDist = slidingContainer.getBoundingClientRect().top * -1;
+			let scrollDist = (slidingContainer.getBoundingClientRect().top - (window.innerHeight / 2)) * -1;
 			if (scrollDist >= 0) {
 				scrollDist = 0;
 			}
