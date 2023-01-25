@@ -11,7 +11,7 @@
 	onMount(() => {
 		window.addEventListener('scroll', () => {
 			let scrollDist = firstStatsContainer.getBoundingClientRect().top * -1;
-			const maxScrollTop = firstStatsContainer.scrollHeight - window.innerHeight;
+			const maxScrollTop = (firstStatsContainer.scrollHeight - window.innerHeight) * 0.90;
 			const internalScrollFraction = scrollDist / maxScrollTop;
 
 			if (internalScrollFraction < 0) {

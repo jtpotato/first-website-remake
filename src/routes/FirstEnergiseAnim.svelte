@@ -19,10 +19,6 @@
 		const img = new Image();
 		img.src = currentFrame(1);
 
-		img.onload = function () {
-			context.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
-		};
-
 		if (!isMobile) {
 			canvas.height = window.innerHeight;
 			canvas.width = canvas.height / (9 / 16);
@@ -34,7 +30,12 @@
 
 			const updateImage = (/** @type {number} */ index) => {
 				let img = frames[index];
-				context.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
+				try {
+					context.drawImage(img, 0, 0, img.width, img.height, 0, 0, canvas.width, canvas.height);
+				} catch {
+					// literally do nothing.
+				}
+				
 			};
 
 			const firstEnergiseAnimContainer = document.getElementById('firstEnergiseAnimContainer');
