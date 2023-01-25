@@ -5,9 +5,9 @@
 <div>
 	<p class="text-6xl font-bold text-center">Our Programs</p>
 
-	<div class="md:flex md:flex-row md:flex-grow md:justify-center md:space-x-4 p-10">
+	<div class="md:flex md:flex-row md:flex-grow md:justify-center space-y-4 md:space-y-0 md:space-x-4 p-10">
 		<Slide class="bg-stone-700 rounded-xl md:w-1/4 shadow-lg space-y-4" slowness={8} >
-			<div class="flex justify-center items-center m-8">
+			<div class="flex justify-center items-center p-8">
 				<img src="/img/fll-white.png" class="h-20" alt="FIRST Lego League" />
 			</div>
 			<img src="/img/program-block-fll.jpg" alt="Children preparing a FIRST Lego League robot" />
@@ -17,7 +17,7 @@
 			</div>
 		</Slide>
 		<Slide class="bg-stone-700 rounded-xl md:w-1/4 shadow-lg space-y-4" slowness={4}>
-			<div class="flex justify-center items-center m-8">
+			<div class="flex justify-center items-center p-8">
 				<img src="/img/ftc-white.png" class="h-20" alt="FIRST Tech Challenge" />
 			</div>
 			<img
@@ -31,7 +31,7 @@
 			<p />
 		</Slide>
 		<Slide class="bg-stone-700 rounded-xl md:w-1/4 shadow-lg space-y-4" slowness={2}>
-			<div class="flex justify-center items-center m-8">
+			<div class="flex justify-center items-center p-8">
 				<img src="/img/frc-white.png" class="h-20" alt="FIRST Robotics Competition" />
 			</div>
 			<img
